@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Comerciales Antiguos</title>
+           <link    href="https://fonts.googleapis.com/css2?family=Open+Arial" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <link rel='stylesheet' href='style.css'/>
+    <link rel='stylesheet' href='menu.css'/>
+
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Pagina Principal</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Comerciales por Decadas</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Años 1950</a></li>
+              <li><a href='http://'>Años 1960</a></li>
+              <li><a href='http://'>Años 1970</a></li>
+              <li><a href='http://'>Años 1980</a></li>
+              <li><a href='http://'>Años 1990</a></li>
+              <li><a href='http://'>Años 2000</a></li>
+              <li><a href='http://'>Años 2010</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Informacion</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Opciones</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Agregar una Imagen</a></li>
+              <li><a href='http://'>Agregar un Video</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Contactanos</a></li>
+        </ul>
+      </nav>
+
+    <link rel='stylesheet' href='style.css'/>
+    <link rel='stylesheet' href='menu.css'/>
+
+    <h1>Comerciales Antiguos</h1>
+    <img src="images/png-transparent-vhs-blu-ray-disc-vcrs-videotape-compact-cassette-cassette-rectangle-cassette-music.png" alt='Mi imagen de Prueba'/>
+    <p>Esta pagina tiene como fin:</p>
+
+    <ul>
+        <li>Recopilar comerciales antiguos que se emitian en television</li>
+        <li>Recuperar comerciales que se han perdido con el paso del tiempo</li>
+        <li>Crear una comunidad en donde se recuerden dichos comerciales y puedan dar su opinion y experiencias</li>
+    </ul>
+
+    <p>Si desea recordar alguna publicidad que has visto hace mucho tiempo, podras hacerlo aqui</p>
+
+    <p>Si desea compartir algun comercial que no esta disponible actualmente puedes hacerlo aqui</p>
+
+    <p>Si desea conocer mas materiales perdidos a parte de comerciales y publicidades, te puede interesar esta pagina: </p>
+         <a    href='https://lostmedia.fandom.com/es/wiki/Lost_Media_en_Espa%C3%B1ol'>Manifiesto Lostmedia</a>
+
+    <table id='customers'>
+        <tr>
+            <th>Nombre</th>
+            <th>Compañia</th>
+            <th>Año de Emision</th>
+            <th>Idioma</th>
+            <th>Video</th>
+        </tr>
+        <tr>
+            <td>Super Smash Bros</td>
+            <td>Nintendo</td>
+            <td>1999</td>
+            <td>Español</td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/EvYmWMak5yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+     
+        </tr>
+        <tr>
+            <td>Comerciales Kickers Años 90</td>
+            <td>Kickers</td>
+            <td>1990-1999</td>
+            <td>Español</td>
+            <td>  <iframe width="560" height="315" src="https://www.youtube.com/embed/L5iclTPUjPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>Windows 7 Commercial</td>
+            <td>Microsoft</td>
+            <td>2009</td>
+            <td>Ingles</td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/pPwKnSPG_7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>Open English Comercial TV El Avion</td>
+            <td>Open English</td>
+            <td>2011</td>
+            <td>Español</td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/xyR0teBuXWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Modal -->
+    <div class="modale" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+              <h2>Agregar Comercial</h2>
+              <a onclick='cerrarModal()' href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+            </div>
+            <div class="modal-body">
+              <input type="text" name="u" placeholder="Nombre" size="20" /><br/>
+              <input type="text" name="p" placeholder="Compañia" size="20" /><br/>
+              <input type="text" name="p" placeholder="Año/s de Emision" size="20" /><br/>
+              <input type="text" name="p" placeholder="Idioma" size="20" /><br/>
+              <input type="text" name="p" placeholder="Video" size="20" /><br/>
+            </div>
+            <div class="modal-footer">
+    
+  
+              <a href="#" class="btn" id="btn_ingresar">Guardar</a>
+            </div>
+          </div>
+       </div>
+    <!-- /Modal -->
+
+    <script>
+       function agregarVideo(){
+           htmlModal = document.getElementById('modal');
+           htmlModal.steAttribute('class', 'modale opened')
+       }
+       function cerrarModal(){
+           htmlModal = document.getElementById('modal');
+           htmlModal.setAttribute('class', 'modale');
+       }
+
+    </script>
+  
+  </body>
+</html>
